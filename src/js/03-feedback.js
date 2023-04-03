@@ -19,6 +19,8 @@ const inputEl = document.querySelector('.feedback-form input');
 inputEl.value = JSON.parse(localStorage.getItem('feedback-form-state'))?.email;
 const messageEl = document.querySelector('.feedback-form textarea');
 messageEl.value = JSON.parse(
+  localStorage.getItem('feedback-form-state')
+)?.message;
 
 formEl.addEventListener('submit', e => {
     e.preventDefault();
